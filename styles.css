@@ -1,0 +1,401 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: #2C5282;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    height: 800vh;
+    position: relative;
+    width: 100%;
+}
+
+/* Header Section */
+.header {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.plant-icon {
+    animation: gentle-sway 3s ease-in-out infinite;
+}
+
+.plant-image {
+    width: 60px;
+    height: auto;
+    max-height: 80px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(44, 82, 130, 0.2));
+}
+
+.main-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2C5282;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Progress Section */
+.progress-container {
+    position: fixed;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.progress-bar {
+    width: 300px;
+    height: 8px;
+    background: rgba(44, 82, 130, 0.2);
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid #2C5282;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #2C5282, #3182CE);
+    width: 0%;
+    transition: width 0.3s ease;
+    border-radius: 4px;
+}
+
+.progress-text {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2C5282;
+    text-align: center;
+}
+
+/* Building Container */
+.building-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 500px;
+    z-index: 10;
+}
+
+.building {
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    border: 3px solid #2C5282;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(44, 82, 130, 0.15);
+}
+
+/* Floor Styles */
+.floor {
+    width: 100%;
+    height: calc(100% / 7);
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+}
+
+.floor-content {
+    flex: 1;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+}
+
+.floor-text {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2C5282;
+    line-height: 1.4;
+}
+
+.floor-divider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #2C5282;
+}
+
+/* Start Section */
+.start-section {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.start-label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #2C5282;
+}
+
+.start-arrow {
+    font-size: 24px;
+    color: #2C5282;
+    animation: pulse-arrow 2s ease-in-out infinite;
+}
+
+/* Elevator Shaft */
+.elevator-shaft {
+    position: absolute;
+    right: 100px;
+    top: 0;
+    width: 80px;
+    height: 100%;
+    background: #f7fafc;
+    border: 2px solid #2C5282;
+    border-radius: 4px;
+}
+
+.elevator {
+    position: absolute;
+    width: 70px;
+    height: calc(100% / 7 - 6px);
+    background: linear-gradient(135deg, #4299E1, #3182CE);
+    border: 2px solid #2C5282;
+    border-radius: 4px;
+    top: 3px;
+    left: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    box-shadow: 0 4px 12px rgba(44, 82, 130, 0.3);
+}
+
+/* Elevator Person */
+.elevator-person {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.person-head {
+    width: 12px;
+    height: 12px;
+    background: #ffffff;
+    border-radius: 50%;
+    border: 1px solid #2C5282;
+}
+
+.person-body {
+    width: 8px;
+    height: 16px;
+    background: #ffffff;
+    border-radius: 4px;
+    border: 1px solid #2C5282;
+}
+
+.elevator-floor-indicator {
+    font-size: 12px;
+    font-weight: bold;
+    color: #ffffff;
+    background: rgba(44, 82, 130, 0.8);
+    padding: 2px 6px;
+    border-radius: 3px;
+    min-width: 20px;
+    text-align: center;
+}
+
+/* Shaft Grid */
+.shaft-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-line {
+    flex: 1;
+    border-bottom: 1px solid #CBD5E0;
+}
+
+.grid-line:last-child {
+    border-bottom: none;
+}
+
+/* Side Grid */
+.side-grid {
+    position: absolute;
+    right: 20px;
+    top: 0;
+    width: 60px;
+    height: 100%;
+    display: flex;
+    gap: 2px;
+}
+
+.grid-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.grid-cell {
+    flex: 1;
+    border: 1px solid #2C5282;
+    background: rgba(44, 82, 130, 0.05);
+}
+
+/* Scroll Hint */
+.scroll-hint {
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 1000;
+    color: #2C5282;
+}
+
+.scroll-text {
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.scroll-arrow {
+    font-size: 24px;
+    animation: bounce-arrow 2s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes gentle-sway {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(2deg);
+    }
+}
+
+@keyframes pulse-arrow {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: translateY(-50%) scale(1);
+    }
+
+    50% {
+        opacity: 0.7;
+        transform: translateY(-50%) scale(1.1);
+    }
+}
+
+@keyframes bounce-arrow {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
+}
+
+/* Hover Effects */
+.floor:hover .floor-text {
+    color: #3182CE;
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+}
+
+.elevator:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .building-container {
+        width: 90%;
+        max-width: 500px;
+    }
+
+    .main-title {
+        font-size: 24px;
+    }
+
+    .progress-bar {
+        width: 250px;
+    }
+
+    .floor-text {
+        font-size: 14px;
+    }
+
+    .side-grid {
+        width: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .building-container {
+        height: 400px;
+    }
+
+    .elevator-shaft {
+        right: 60px;
+        width: 60px;
+    }
+
+    .elevator {
+        width: 50px;
+    }
+
+    .floor-text {
+        font-size: 12px;
+    }
+}

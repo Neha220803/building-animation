@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Training Program Elevator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header Section -->
+      <div class="header">
+        <div class="plant-icon">
+          <img src="./image.png" alt="Plant Icon" class="plant-image" />
+        </div>
+        <h1 class="main-title">Training Program Journey</h1>
+      </div>
+
+      <!-- Progress Indicator -->
+      <div class="progress-container">
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <div class="progress-text" id="progressText">Start Your Journey</div>
+      </div>
+
+      <!-- Building Container -->
+      <div class="building-container">
+        <div class="building">
+          <!-- Training Floors -->
+          <div class="floor floor-7">
+            <div class="floor-content">
+              <span class="floor-text">Hands-On Practical Training</span>
+            </div>
+            <div class="floor-divider"></div>
+          </div>
+
+          <div class="floor floor-6">
+            <div class="floor-content">
+              <span class="floor-text">Job-Oriented Training</span>
+            </div>
+            <div class="floor-divider"></div>
+          </div>
+
+          <div class="floor floor-5">
+            <div class="floor-content">
+              <span class="floor-text"
+                >Training cost that fits your budget</span
+              >
+            </div>
+            <div class="floor-divider"></div>
+          </div>
+
+          <div class="floor floor-4">
+            <div class="floor-content">
+              <span class="floor-text">Career Assistance & Job Referrals</span>
+            </div>
+            <div class="floor-divider"></div>
+          </div>
+
+          <div class="floor floor-3">
+            <div class="floor-content">
+              <span class="floor-text">Flexible Learning Modes</span>
+            </div>
+            <div class="floor-divider"></div>
+          </div>
+
+          <div class="floor floor-2">
+            <div class="floor-content">
+              <span class="floor-text">Updated syllabus</span>
+            </div>
+            <div class="floor-divider"></div>
+          </div>
+
+          <div class="floor floor-1">
+            <div class="floor-content">
+              <span class="floor-text"
+                >Real time industry oriented training</span
+              >
+            </div>
+            <div class="start-section">
+              <div class="start-label">START</div>
+              <div class="start-arrow">→</div>
+            </div>
+          </div>
+
+          <!-- Elevator Shaft -->
+          <div class="elevator-shaft">
+            <div class="elevator" id="elevator">
+              <div class="elevator-person">
+                <div class="person-head"></div>
+                <div class="person-body"></div>
+              </div>
+              <div class="elevator-floor-indicator" id="elevatorIndicator">
+                7
+              </div>
+            </div>
+
+            <!-- Elevator shaft grid lines -->
+            <div class="shaft-grid">
+              <div class="grid-line"></div>
+              <div class="grid-line"></div>
+              <div class="grid-line"></div>
+              <div class="grid-line"></div>
+              <div class="grid-line"></div>
+              <div class="grid-line"></div>
+            </div>
+          </div>
+
+          <!-- Right side grid -->
+          <div class="side-grid">
+            <div class="grid-column">
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+            </div>
+            <div class="grid-column">
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+              <div class="grid-cell"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
